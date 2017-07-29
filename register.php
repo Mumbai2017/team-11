@@ -1,5 +1,6 @@
 <?php 
-	session_start();
+	//session_start();
+ob_start();
 	include("connection.php");
 
 $emailid = trim($_POST['emailid']);
@@ -62,4 +63,5 @@ header("Location: Login.html"); /* Redirect browser */
 
 $conn->close();
 ?>
-	
+
+</html>	

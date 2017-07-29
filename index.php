@@ -107,11 +107,12 @@
 						</div>
 					</div>
 				</div>
+                </section>
 				<footer>
 						<p>100% Whole Wheat, No Maida, No White Sugar, Zero Transfat, No Preservatives!</p>
 						
 					</footer>
-			</section>
+			
 
 
 
