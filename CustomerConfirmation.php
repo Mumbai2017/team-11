@@ -32,6 +32,7 @@
         //$result=mysqli_query($conn,$sql);
         $result=1;
         $fulfilled=0;
+        $qry1="";
         if($quantity1!=0){
             $ck = $_POST['interest16'];
             if ($ck != 'Yes') {
@@ -43,8 +44,9 @@
             }
             echo "<tr><td>".$_POST['name1']."</td><td>".$quantity1."</td><td>".$ck."</td><td>".$ck1."</td></tr>";
             
-            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name1']."','".$quantity1."','".$result."','".$ck."',".$ck1.",".$fulfilled.")";
-            $result=mysqli_query($conn,$qry1);
+            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name1']."','".$quantity1."','".$result."','".$ck."','".$ck1."',".$fulfilled.")";
+            //echo $qry1;
+           $result=mysqli_query($conn,$qry1);
         }
         if($quantity2!=0){
             $ck = $_POST['interest'];
@@ -56,6 +58,9 @@
                 $ck1 = 'No';
             }
             echo "<tr><td>".$_POST['name2']."</td><td>".$quantity2."</td><td>".$ck."</td><td>".$ck1."</td></tr>";
+            
+            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name1']."','".$quantity1."','".$result."','".$ck."','".$ck1."',".$fulfilled.")";
+            echo $qry1;
         }
         if($quantity3!=0){
             $ck = $_POST['interest2'];
@@ -136,19 +141,9 @@
         }
             
         
-        
-            ?>
-        </table>
-        <?php
-        function insert(){
-            echo "Test";
-           $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name1']."','".$quantity1."','".$result."','".$ck."',".$ck1.",".$fulfilled.")";
-            $result=mysqli_query($conn,$qry1); 
-        }
-        echo "<input type='button' class='button special' value='Confirm order' onclick='insert()'>";
-        
         ?>
-          
+        </table>
+          <input type='button' class='button special' value='Confirm order' onclick='abc.html'>
         
     </body>
 </html>
