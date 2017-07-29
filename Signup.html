@@ -1,166 +1,116 @@
 <!DOCTYPE html>
-<html>
-<style>
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
+<!--
+	Transit by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
 
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
+<?php include'connection.php'
+session_start();
+ ?>
+ 
+<html lang="en">
+	<head>
+		
 
-button:hover {
-    opacity: 0.8;
-}
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="mystyle.css">
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-/* Center the image and position the close button */
-
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-    
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}
-</style>
-<body>
-
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" method="post" action="register.php">
-    
-
-    <div class="container">
-      <label for="email"><b>Email</b></label>
-      <input type="email" placeholder="Enter Email" name="emailid" id="emailid" required>
-
-      <label for="password"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="regpassword" id="regpassword" required>
-      
-      <label for="name"><b>Name</b></label>
-      <input type="text" placeholder="Enter Name" name="firstname" id="firstname" required>
-      
-      <label for="address">Address:</label>
-      <input type="text" name="address" id="address" size="50" palceholder="enter address" />  
-     <label for="contactnum">Contact number:</label>
-      <input type="text" name="contact_number" id="contact_number" palceholder="enter phone number" required/>
-     
-        <input type="radio" name="stakeholder" value="customer" /><b>Customer</b>
-        <input type="radio" name="stakeholder" value="sakhi" /><b>Sakhi<br><br>
-
-      <button type="submit">Register</button>
-      
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-     
-    </div>
-  </form>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+<img src="sanisaheader.jpg" style="width:100%";></img>
+<div class="topnav" id="myTopnav">
+  <a href="index.php">Home</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
     }
 }
 </script>
+	
+		
+<div class="row">
+<div id="contactform" class="col-lg-6 col-md-6 col-sm-12 col-xs-12"  style="position:absolute;left:0;right:0;margin:auto;">		
+<form name="myForm" action="register.php" method="post">
+<div class="form-group">
+<br><br><br>
+    <label for="NameInput">Name :</label>
+    <input type="text" class="form-control focusinput" name="Name_Input" id="Name_Input12" placeholder="Enter name" autofocus required style=" text-transform: capitalize;">
+    
+   <!-- <ul class="name_req">
+    <li>Should contain only letters , no special characters and no numbers.</li>
+    </ul >   -->
+  
+  </div>
+  <div class="form-group">
+    <label for="EmailInput">Email address :</label>
+    <input type="email" class="form-control focusinput" id="Emailadd" placeholder="Enter Email address" autofocus required>
+    <!-- <ul class="email_req">
+   <li>Input a valid email.</li>
+    </ul> -->
+  </div>
+  
+  <div class="form-group">
+    <label for="PhoneNum">Password :</label>
+    <input type="password" class="form-control focusinput" name="password" id="Password" placeholder="Password" required>
+     <!-- <ul class="phone_req">
+    <li>Input a valid phone number.</li>
+    </ul>-->
+  </div>
+  <div class="form-group">
+    <label for="PhoneNum">Phone number :</label>
+    <input type="text" class="form-control focusinput" name="PhoneNum" id="PhoneNum12" placeholder="Phone number"  required>
+     <!-- <ul class="phone_req">
+    <li>Input a valid phone number.</li>
+    </ul>-->
+  </div>
+  
+  <div class="form-group">
+    <label for="Address">Address:</label>
+    <input type="text" class="form-control focusinput" name="Address" id="PhoneNum12" placeholder="Address" required>
+     <!-- <ul class="phone_req">
+    <li>Input a valid phone number.</li>
+    </ul>-->
+  </div>
+  
+  <div class="form-group">
+    <label for="Address">City:</label>
+    <input type="text" class="form-control focusinput" name="City" id="City" placeholder="City" required>
+     <!-- <ul class="phone_req">
+    <li>Input a valid phone number.</li>
+    </ul>-->
+  </div>
+  
+  <div class="form-group">
+  <input type="radio" name="customer" value="customer" id="customer"/><b> Customer</b><br>
+  <input type="radio" name="sakhi" value="sakhi" id="sakhi"/><b> Sakhi</b><br>
+  </div>
+
+  <button type="submit" id="submit_form" onsubmit="" style="margin-bottom: 5%;">Submit</button>
+
+</form>
+
+</div></div><!--end of contact for div-->
+
+</div></div><!--contact us n fluid-->
+
+
 
 </body>
 </html>
