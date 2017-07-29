@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include("connection.php");
     //session_start();
     //$sakhilocation="select location from sakhi where $%#$=sakhiid";
@@ -26,7 +27,10 @@
         $quantity7= $_POST['firstname7'];
         $quantity8= $_POST['firstname8'];
         $quantity9= $_POST['firstname9'];
-        $custid=$_SESSION[];
+        //$custid=$_SESSION["customer_name"];
+        //$sql="select id from customer where name='$cust'";
+        //$result=mysqli_query($conn,$sql);
+        $result=1;
         $fulfilled=0;
         if($quantity1!=0){
             $ck = $_POST['interest16'];
@@ -39,8 +43,8 @@
             }
             echo "<tr><td>".$_POST['name1']."</td><td>".$quantity1."</td><td>".$ck."</td><td>".$ck1."</td></tr>";
             
-            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name1']."','".$quantity1."','".."','".$ck."',".$ck1.","'0'")";
-            //$result=mysqli_query($conn,$qry1);
+            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name1']."','".$quantity1."','".$result."','".$ck."',".$ck1.",".$fulfilled.")";
+            $result=mysqli_query($conn,$qry1);
         }
         if($quantity2!=0){
             $ck = $_POST['interest'];
@@ -135,6 +139,16 @@
         
             ?>
         </table>
-        <input type="button" class="button special" value="Confirm order">
+        <?php
+        function insert(){
+            echo "Test";
+           $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name1']."','".$quantity1."','".$result."','".$ck."',".$ck1.",".$fulfilled.")";
+            $result=mysqli_query($conn,$qry1); 
+        }
+        echo "<input type='button' class='button special' value='Confirm order' onclick='insert()'>";
+        
+        ?>
+          
+        
     </body>
 </html>
