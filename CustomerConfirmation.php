@@ -196,15 +196,11 @@
         }
         //$custid=$_SESSION["customer_name"];
     //$sql="select id from customer where name='$cust'";
-    //$result=mysqli_query($conn,$sql);
-    $result=1;
-    $qry="update tracking set track_no=1 where customer_id='".$result."'";
-    $result=mysqli_query($conn,$sql);    
+    //$result=mysqli_query($conn,$sql);    
         
         ?>
     </tbody>
   </table>
-
 
     <button type="button" class="button special" onclick="window.location.href='redirect.php'">Confirm Order</button>
 
@@ -213,15 +209,4 @@
 </div>
 
 </body>
-</html>
-<html>
-    <head>
-    
-    </head>
-    <body>
-        
-        </table>
-          
-        
-    </body>
 </html>

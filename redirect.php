@@ -5,6 +5,8 @@
   $cust = "diksha";
   //$order_id = $_POST["order_id"];
   $order_id = "1";
+  $qry="INSERT INTO tracking(track_no,customer_id,order_id) VALUES (1,1,1)";
+  $result=mysqli_query($conn,$qry);
   $sql = "SELECT location FROM customer WHERE name = '$cust'";
   $result = mysqli_query($conn,$sql);
   $row = mysqli_fetch_assoc($result);
