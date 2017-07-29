@@ -70,11 +70,13 @@ function myFunction() {
   <input type="radio" name="radiobut" value="customer" id="customer"/><b> Customer</b><br><br>
   <input type="radio" name="radiobut" value="sakhi" id="sakhi"/><b> Sakhi</b><br><br>
 <input type="radio" name="radiobut" value="ngo" id="ngo"/><b>NGO</b><br><br>
-  <button type="submit" id="submit_form" onclick="chekcSubmitType()" style="margin-bottom: 5%;">Submit</button>
+  <!--<button type="submit" id="submit_form" onclick="chekcSubmitType()" style="margin-bottom: 5%;">Submit</button>-->
+    <input id="clickMe" type="button" style="margin-bottom: 5%;" value="Submit" onclick="chekcSubmitType();" />
 
 <script>
 function chekcSubmitType()
 {
+    console.log("Test");
     if(document.getElementById('customer').checked==true)
     {
         console.log("Hello");
@@ -86,7 +88,7 @@ function chekcSubmitType()
     }
 	else if(document.getElementById('ngo').checked==true)
     {
-         window.location.href='dashboard.php';
+         window.location.href='Dashboard/dashboard.php.html';
     }
 
 }
