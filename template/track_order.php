@@ -1,12 +1,6 @@
 <!DOCTYPE html>
-<!--
-	Transit by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-
-<?php include'connection.php'
-session_start();
+<?php 
+	include'../connection.php'
  ?>
  
 <html lang="en">
@@ -27,7 +21,25 @@ session_start();
 	<body>
 <img src="sanisaheader.jpg" style="width:100%";></img>
 
-
+<?php
+session_start();
+	//$customer_name = $_SESSION["customer_name"];
+	$customer_name = "User 1";
+	$sql = "SELECT * FROM orderdetails WHERE customer_id = (SELECT id FROM customer WHERE name='$customer_name')";
+	$result = mysqli_query($conn,$sql);
+  	while($row = mysqli_fetch_assoc($result)) {
+  		if($row["fulfilled"])
+  			$delivered = "Delivered";
+  		else
+  			$delivered = "In Transit";
+  		$order_id = $row["orderid"];
+  		echo 'Product Name: '.$row["pname"].' Product Quantity: '.$row["pquantity"].' Order Delivered: '.$delivered.'<br>';
+  		echo '<form method="post" action="../tracking.php">
+  				<input type="submit" name="submit" value="Track Order" />
+  				<input type="hidden" name="id" value="id" />
+  				</form>';
+  	}
+?>
 
 
 </body>
