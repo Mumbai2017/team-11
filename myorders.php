@@ -3,15 +3,36 @@
   include("connection.php");
 ?>
 <!DOCTYPE html>
-<html>
-<head>
 
-</head>
-<body>
 	<?php
 		error_reporting(0);
 		//$sakhi_name = $_SESSION["sakhi_name"];
-		$sakhi_name = "diksha";
+	<!DOCTYPE html>
+<!--
+	Transit by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+
+ 
+<html lang="en">
+	<head>
+		
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="mystyle.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+<img src="sanisaheader.jpg" style="width:100%";></img>	$sakhi_name = "diksha";
 		$sql = "SELECT * from orderdetails WHERE sakhi_id = (SELECT id from sakhi WHERE name = '$sakhi_name') AND status!=1";
 		$result = mysqli_query($conn,$sql);
 	    $count = mysqli_num_rows($result);
