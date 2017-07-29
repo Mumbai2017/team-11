@@ -17,6 +17,7 @@
     $new_array[$row['id']] = $row['name'];
   }
   $_SESSION['sakhis'] = $new_array;
+  TODO: send sms to sakhi
   //$array = array('order_id' => $order_id, 'sakhi_names' => $new_array);
   /*foreach($_SESSION['sakhis'] as $item) {
     if($item!=null)
