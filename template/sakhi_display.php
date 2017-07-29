@@ -31,23 +31,19 @@ session_start();
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 <div class="container">
-  <h2>Sakhis near you</h2>
-                                                                                       
+  <h2>Order List</h2>
+    <br>
+<br>
+<br>	
   <div class="table-responsive">          
   <table class="table">
     <thead>
       <tr>
-        <th>Sakhi Name</th>
-        <th>Breakfast Khakra</th>
-		<th>Methi Masala Khakra</th>
-        <th>Dahi Bajri Methi</th>
-		<th>Nachni Khakra</th>
-        <th>Jeera Khakra</th>
-		<th>Peppery Oats Khakra</th>
-		<th>Khichdi Khakra</th>
-		<th>Punjabi Khakra</th>
-		<th>Low Calorie Khakra</th>
-      </tr>
+        <th>Name</th>
+        <th>Quantity</th>
+		<th>Urgent</th>
+        <th>Pick-Up</th>
+		</tr>
     </thead>
     <tbody>
       <tr>
@@ -60,10 +56,12 @@ session_start();
       </tr>
     </tbody>
   </table>
+
+<button type="button">					<a href="#" class="button special">Confirm Order</a>
+</button>
+
   </div>
 </div>
-
-
 
 
 
