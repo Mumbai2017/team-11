@@ -46,7 +46,7 @@
 		<
 		<!-- Banner -->
 			<section id="banner">
-				<h2>Shramak Naari Sangh</h2>
+				<h2>Shramik Naari Sangh</h2>
 				<p>Priviledged are those who can support the less priviledged!</p>
 				<ul class="actions">
 					<!--<li>
