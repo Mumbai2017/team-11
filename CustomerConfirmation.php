@@ -194,7 +194,12 @@
             $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name9']."','".$quantity9."','".$result."','".$ck."','".$ck1."',".$fulfilled.")";
             $result=mysqli_query($conn,$qry1);
         }
-            
+        //$custid=$_SESSION["customer_name"];
+    //$sql="select id from customer where name='$cust'";
+    //$result=mysqli_query($conn,$sql);
+    $result=1;
+    $qry="update tracking set track_no=1 where customer_id='".$result."'";
+    $result=mysqli_query($conn,$sql);    
         
         ?>
     </tbody>
