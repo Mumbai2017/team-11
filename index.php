@@ -114,9 +114,7 @@
 					</footer>
 			
 
-
-
-		<!-- Footer -->
+	<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
 				<h2>Contact Us!</h2>

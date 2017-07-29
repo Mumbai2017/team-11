@@ -26,7 +26,7 @@ session_start();
 		
 	</head>
 	<body>
-<img src="sanisaheader.jpg" style="width:100%";>]
+<img src="sanisaheader.jpg" style="width:100%";>
 <div class="topnav" id="myTopnav">
   <a href="index.php">Home</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
@@ -75,16 +75,16 @@ function myFunction() {
 <script>
 function chekcSubmitType()
 {
-    if(document.getElementById('customer').checked)
+    if(document.getElementById('customer').checked==true)
     {
         console.log("Hello");
         window.location.href='order.html'; 
     }
-    else if(document.getElementById('sakhi').checked)
+    else if(document.getElementById('sakhi').checked==true)
     {
          window.location.href='sakhi_display.php';
     }
-	else if(document.getElementById('ngo').checked)
+	else if(document.getElementById('ngo').checked==true)
     {
          window.location.href='dashboard.php';
     }
