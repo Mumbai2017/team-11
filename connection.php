@@ -4,4 +4,9 @@
 	$mysql_password = "123456";
 	$mysql_database = "id2394212_codeforgood";
 	$conn = mysqli_connect($mysql_hostname, $mysql_user, $mysql_password, $mysql_database);
+	/*$mysql_hostname = "localhost";
+	$mysql_user = "root";
+	$mysql_password = "";
+	$mysql_database = "id2394212_codeforgood";
+	$conn = mysqli_connect($mysql_hostname, $mysql_user, $mysql_password, $mysql_database);*/
 ?>

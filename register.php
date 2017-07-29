@@ -10,15 +10,15 @@ $pass = trim($_POST['regpassword']);
 $pass = strip_tags($pass);
 $pass = htmlspecialchars($pass);
 
-$firstname = trim($_POST['firstname']);
+$firstname = trim($_POST['Name_Input']);
 $firstname = strip_tags($firstname);
 $firstname = htmlspecialchars($firstname);
 
-$area = trim($_POST['address']);
+$area = trim($_POST['Address']);
 $area = strip_tags($area);
 $area = htmlspecialchars($area);
 
-$contact = trim($_POST['contact_number']);
+$contact = trim($_POST['PhoneNum']);
 $contact = strip_tags($contact);
 $contact = htmlspecialchars($contact);
 
@@ -58,6 +58,8 @@ else
 }
 
 }
+header("Location: Login.html"); /* Redirect browser */
+
 $conn->close();
 ?>
 	

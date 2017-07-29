@@ -38,12 +38,5 @@
 	    	echo "You currently do not have any pending orders";
 	    }
 	?>
-	<div id="contact">
-		<?php
-			if(isset($_GET['thankyou'])) {
-				echo "yolo";
-			}
-		?>
-	</div>
 </body>
 </html>

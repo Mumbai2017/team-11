@@ -1,5 +1,6 @@
 <?php
     include("connection.php");
+    include("template/sakhi_display.php");
     //session_start();
     //$sakhilocation="select location from sakhi where $%#$=sakhiid";
     

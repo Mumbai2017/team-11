@@ -29,19 +29,23 @@
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 <div class="container">
-  <h2>Order List</h2>
-    <br>
-<br>
-<br>	
+  <h2>Sakhis near you</h2>
+                                                                                       
   <div class="table-responsive">          
   <table class="table">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Quantity</th>
-		<th>Urgent</th>
-        <th>Pick-Up</th>
-		</tr>
+        <th>Sakhi Name</th>
+        <th>Breakfast Khakra</th>
+		<th>Methi Masala Khakra</th>
+        <th>Dahi Bajri Methi</th>
+		<th>Nachni Khakra</th>
+        <th>Jeera Khakra</th>
+		<th>Peppery Oats Khakra</th>
+		<th>Khichdi Khakra</th>
+		<th>Punjabi Khakra</th>
+		<th>Low Calorie Khakra</th>
+      </tr>
     </thead>
     <tbody>
       
@@ -78,12 +82,10 @@
       
     </tbody>
   </table>
-
-<button type="button">					<a href="#" class="button special">Confirm Order</a>
-</button>
-
   </div>
 </div>
+
+
 
 
 
