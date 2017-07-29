@@ -26,12 +26,12 @@ $radioholder=$_POST['stakeholder'];
 
 if($radioholder=="customer")
 {
-$check_email = $conn->query("SELECT id FROM customer WHERE id='$emailid'");
+$check_email = $conn->query("SELECT emailid FROM customer WHERE id='$emailid'");
 $count = $check_email->num_rows;	
 
 if($count==0)
 {
-$query = $conn->query("INSERT INTO customer(id,password,name,location,contact) VALUES('$emailid','$pass','$firstname','$area','$contact')");
+$query = $conn->query("INSERT INTO customer(emailid,password,name,location,contact) VALUES('$emailid','$pass','$firstname','$area','$contact')");
 
 	echo "<script type='text/javascript'>alert('Record created successfully.');</script>";
 }
@@ -43,12 +43,12 @@ else
 }
 else if($radioholder=="sakhi")
 {
-	$check_email = $conn->query("SELECT id FROM customer WHERE id='$emailid'");
+	$check_email = $conn->query("SELECT emailid FROM customer WHERE emailid='$emailid'");
 $count = $check_email->num_rows;	
 
 if($count==0)
 {
-$query = $conn->query("INSERT INTO sakhi(id,password,name,location,contact) VALUES('$emailid','$pass','$firstname','$area','$contact')");
+$query = $conn->query("INSERT INTO sakhi(emailid,password,name,location,contact) VALUES('$emailid','$pass','$firstname','$area','$contact')");
 
 	echo "<script type='text/javascript'>alert('Record created successfully.');</script>";
 }
