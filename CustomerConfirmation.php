@@ -16,6 +16,7 @@
         
     </head>
     <body>
+        MAKE CHANGES TO SESSION
         <table><tr><th>Name:</th><th>Quantity:</th><th>Urgent:</th><th>Pickup:</th></tr>
         <?php
         $quantity1= $_POST['firstname1'];
@@ -59,8 +60,9 @@
             }
             echo "<tr><td>".$_POST['name2']."</td><td>".$quantity2."</td><td>".$ck."</td><td>".$ck1."</td></tr>";
             
-            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name1']."','".$quantity1."','".$result."','".$ck."','".$ck1."',".$fulfilled.")";
-            echo $qry1;
+            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name2']."','".$quantity2."','".$result."','".$ck."','".$ck1."',".$fulfilled.")";
+            $result=mysqli_query($conn,$qry1);
+           // echo $qry1;
         }
         if($quantity3!=0){
             $ck = $_POST['interest2'];
@@ -72,6 +74,8 @@
                 $ck1 = 'No';
             }
             echo "<tr><td>".$_POST['name3']."</td><td>".$quantity3."</td><td>".$ck."</td><td>".$ck1."</td></tr>";
+            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name3']."','".$quantity3."','".$result."','".$ck."','".$ck1."',".$fulfilled.")";
+            $result=mysqli_query($conn,$qry1);
         }
         if($quantity4!=0){
             $ck = $_POST['interest4'];
@@ -83,6 +87,8 @@
                 $ck1 = 'No';
             }
             echo "<tr><td>".$_POST['name4']."</td><td>".$quantity4."</td><td>".$ck."</td><td>".$ck1."</td></tr>";
+            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name4']."','".$quantity4."','".$result."','".$ck."','".$ck1."',".$fulfilled.")";
+            $result=mysqli_query($conn,$qry1);
         }
         if($quantity5!=0){
             $ck = $_POST['interest6'];
@@ -94,6 +100,8 @@
                 $ck1 = 'No';
             }
             echo "<tr><td>".$_POST['name5']."</td><td>".$quantity5."</td><td>".$ck."</td><td>".$ck1."</td></tr>";
+            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name5']."','".$quantity5."','".$result."','".$ck."','".$ck1."',".$fulfilled.")";
+            $result=mysqli_query($conn,$qry1);
         }
         if($quantity6!=0){
             $ck = $_POST['interest8'];
@@ -105,6 +113,8 @@
                 $ck1 = 'No';
             }
             echo "<tr><td>".$_POST['name6']."</td><td>".$quantity6."</td><td>".$ck."</td><td>".$ck1."</td></tr>";
+            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name6']."','".$quantity6."','".$result."','".$ck."','".$ck1."',".$fulfilled.")";
+            $result=mysqli_query($conn,$qry1);
         }
         if($quantity7!=0){
             $ck = $_POST['interest10'];
@@ -116,6 +126,8 @@
                 $ck1 = 'No';
             }
             echo "<tr><td>".$_POST['name7']."</td><td>".$quantity7."</td><td>".$ck."</td><td>".$ck1."</td></tr>";
+            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name7']."','".$quantity7."','".$result."','".$ck."','".$ck1."',".$fulfilled.")";
+            $result=mysqli_query($conn,$qry1);
         }
         if($quantity8!=0){
             $ck = $_POST['interest12'];
@@ -127,6 +139,8 @@
                 $ck1 = 'No';
             }
             echo "<tr><td>".$_POST['name8']."</td><td>".$quantity8."</td><td>".$ck."</td><td>".$ck1."</td></tr>";
+            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name8']."','".$quantity8."','".$result."','".$ck."','".$ck1."',".$fulfilled.")";
+            $result=mysqli_query($conn,$qry1);
         }
         if($quantity9!=0){
             $ck = $_POST['interest14'];
@@ -138,12 +152,14 @@
                 $ck1 = 'No';
             }
             echo "<tr><td>".$_POST['name9']."</td><td>".$quantity9."</td><td>".$ck."</td><td>".$ck1."</td></tr>";
+            $qry1="insert into orderdetails(pname,pquantity,customer_id,Urgency,Pickup,fulfilled)values('".$_POST['name9']."','".$quantity9."','".$result."','".$ck."','".$ck1."',".$fulfilled.")";
+            $result=mysqli_query($conn,$qry1);
         }
             
         
         ?>
         </table>
-          <input type='button' class='button special' value='Confirm order' onclick='abc.html'>
+          <button onclick="window.location.href='redirect.php'">Confirm</button>
         
     </body>
 </html>
