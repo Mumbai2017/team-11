@@ -14,8 +14,9 @@
         </style>
     </head>
     <body>
+       <div id="EntireCatalog" style="display:blocked">
         <?php
-        $sakhilocation="Goregaon";
+       // $sakhilocation="Goregaon";
     //$qry1="select * from sakhi where location='".$sakhilocation."';";
     $qry2="select * from itemsdetails order by sakhiloc;";
     //echo $qry;
@@ -44,5 +45,8 @@
 							}
 
         ?>
+            </div>
+        
+        
     </body>
 </html>
