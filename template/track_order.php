@@ -22,7 +22,6 @@
 <img src="sanisaheader.jpg" style="width:100%";></img>
 
 <?php
-session_start();
 	//$customer_name = $_SESSION["customer_name"];
 	$customer_name = "User 1";
 	$sql = "SELECT * FROM orderdetails WHERE customer_id = (SELECT id FROM customer WHERE name='$customer_name')";
@@ -33,10 +32,11 @@ session_start();
   		else
   			$delivered = "In Transit";
   		$order_id = $row["orderid"];
+  		//echo $order_id;
   		echo 'Product Name: '.$row["pname"].' Product Quantity: '.$row["pquantity"].' Order Delivered: '.$delivered.'<br>';
   		echo '<form method="post" action="../tracking.php">
   				<input type="submit" name="submit" value="Track Order" />
-  				<input type="hidden" name="id" value="id" />
+  				<input type="hidden" name="id" value="'.$order_id.'" />
   				</form>';
   	}
 ?>

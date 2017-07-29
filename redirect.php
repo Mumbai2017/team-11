@@ -2,7 +2,7 @@
   session_start();
   include("connection.php");
   //$cust = $_SESSION["customer_name"];
-  $cust = "diksha";
+  $cust = "User 1";
   //$order_id = $_POST["order_id"];
   $order_id = "1";
   $qry="INSERT INTO tracking(track_no,customer_id,order_id) VALUES (1,1,1)";
@@ -19,7 +19,8 @@
     $new_array[$row['id']] = $row['name'];
   }
   $_SESSION['sakhis'] = $new_array;
-  TODO: send sms to sakhi
+  //TODO: send sms to sakhi
+  header("Location: processing.php");
   //$array = array('order_id' => $order_id, 'sakhi_names' => $new_array);
   /*foreach($_SESSION['sakhis'] as $item) {
     if($item!=null)
