@@ -20,6 +20,9 @@
   else {
   	$sql = "UPDATE orderdetails SET sakhi_id = 0 WHERE sakhi_id = '$sakhi_id'";
   	$result = mysqli_query($conn,$sql);
+  	//$array = $_SESSION["sakhis"];
+  	unset($_SESSION['sakhis'][0]);
+    $_SESSION["sakhis"] = array_values($_SESSION["sakhis"]);
   	header("Location: myorders.php");
   }
 ?>
