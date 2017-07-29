@@ -60,7 +60,7 @@ function myFunction() {
   </div>
   <div class="form-group">
     <label for="EmailInput">Email address :</label>
-    <input type="email" class="form-control focusinput" id="Emailadd" placeholder="Enter Email address" autofocus required>
+    <input type="email" name="emailid"class="form-control focusinput" id="Emailadd" placeholder="Enter Email address" autofocus required>
     <!-- <ul class="email_req">
    <li>Input a valid email.</li>
     </ul> -->
@@ -68,7 +68,7 @@ function myFunction() {
   
   <div class="form-group">
     <label for="PhoneNum">Password :</label>
-    <input type="password" class="form-control focusinput" name="password" id="Password" placeholder="Password" required>
+    <input type="password" class="form-control focusinput" name="regpassword" id="Password" placeholder="Password" required>
      <!-- <ul class="phone_req">
     <li>Input a valid phone number.</li>
     </ul>-->
@@ -98,8 +98,8 @@ function myFunction() {
   </div>
   
   <div class="form-group">
-  <input type="radio" name="customer" value="customer" id="customer"/><b> Customer</b><br>
-  <input type="radio" name="sakhi" value="sakhi" id="sakhi"/><b> Sakhi</b><br>
+  <input type="radio" name="stakeholder" value="customer" id="customer"/><b> Customer</b><br>
+  <input type="radio" name="stakeholder" value="sakhi" id="sakhi"/><b> Sakhi</b><br>
   </div>
 
   <button type="submit" id="submit_form" onsubmit="" style="margin-bottom: 5%;">Submit</button>
