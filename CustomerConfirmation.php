@@ -5,20 +5,59 @@
     //$sakhilocation="select location from sakhi where $%#$=sakhiid";
     error_reporting(0);
 ?>
-<html>
-    <head>
-        <style>
+<!DOCTYPE html>
+<!--
+	Transit by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+
+ 
+<html lang="en">
+	<head>
+		
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="mystyle.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	    <style>
         table, th, td {
     border: 1px solid black;
 }
             
         </style>
-        
-    </head>
-    <body>
-        MAKE CHANGES TO SESSION
-        <table><tr><th>Name:</th><th>Quantity:</th><th>Urgent:</th><th>Pickup:</th></tr>
-        <?php
+        	
+	</head>
+	<body>
+<img src="sanisaheader.jpg" style="width:100%";>
+<div class="topnav" id="myTopnav">
+  <a href="index.php">Home</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<div class="container">
+  <h2>Order List</h2>
+    <br>
+<br>
+<br>	MAKE CHANGES TO SESSION
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+		<th>Urgent</th>
+        <th>Pick-Up</th>
+		</tr>
+    </thead>
+    <tbody>
+       <?php
         $quantity1= $_POST['firstname1'];
         $quantity2= $_POST['firstname2'];
         $quantity3= $_POST['firstname3'];
@@ -158,8 +197,26 @@
             
         
         ?>
+    </tbody>
+  </table>
+
+
+    <button type="button" class="button special" onclick="window.location.href='redirect.php'">Confirm Order</button>
+
+
+  </div>
+</div>
+
+</body>
+</html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        
         </table>
-          <button onclick="window.location.href='redirect.php'">Confirm</button>
+          
         
     </body>
 </html>

@@ -1,3 +1,6 @@
+<?php include'connection.php'
+session_start();
+ ?>
 <!DOCTYPE html>
 <!--
 	Transit by TEMPLATED
@@ -5,9 +8,7 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 
-<?php include'connection.php'
-session_start();
- ?>
+
  
 <html lang="en">
 	<head>
@@ -25,7 +26,7 @@ session_start();
 		
 	</head>
 	<body>
-<img src="sanisaheader.jpg" style="width:100%";></img>
+<img src="sanisaheader.jpg" style="width:100%";>
 <div class="topnav" id="myTopnav">
   <a href="index.php">Home</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
