@@ -45,7 +45,7 @@
 		    	$cust = "SELECT location FROM customer WHERE id = '$customer'";
 		    	$result1 = mysqli_query($conn,$cust);
 		    	$cust_row = mysqli_fetch_assoc($result1);
-		    	echo '<p style="font-size:21px; padding-top:20px; text-align: center">Product name: '.$row["pname"].'<br> Quantity: '.$row["pquantity"].' <br>Customer Location: '.$cust_row["location"].'</p>';
+		    	echo '<p style="font-size:23px; padding-top:20px; text-align: center">Product name: '.$row["pname"].'<br> Quantity: '.$row["pquantity"].' <br>Customer Location: '.$cust_row["location"].'</p>';
 		    	echo '<form method="post" action="order_confirm.php">
 					<input type="submit" name="res" value="accept" style="margin:auto;
   display:block; background: #17232b;
@@ -85,5 +85,6 @@
 	    	echo "You currently do not have any pending orders";
 	    }
 	?>
+        
 </body>
 </html>
