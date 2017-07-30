@@ -35,7 +35,7 @@
 					</ul>
 				</nav>
 			</header>
-    <p style="font-size: 19px;">Unplaced orders</p>
+    <p style="font-size: 19px; text-align: center">Unplaced orders</p>
     <?php 
     $qry="select * from orderdetails where status=0;";
     $result=mysqli_query($conn,$qry);
@@ -48,13 +48,16 @@
 	 echo "Successful";
 } else {
 	echo "Query error"; 
-}*/echo "<table><tr><th>Order ID</th><th>Product</th><th>Customer ID</th><th>Urgent</th></tr>";
+}*/echo "<table><tr><th>Order ID</th><th>Product</th><th>Customer Name</th><th>Urgent</th></tr>";
         if ($result->num_rows > 0) {
 							     // output data of each row
 							     while($row = $result->fetch_assoc()) {
 							     	//echo "<tr>";
                                     // echo "<tr><td>Test</td></tr>";
-							         echo "<tr><td>" . $row["orderid"] . "</td> <td> ".$row["pname"]."</td><td> ".$row["customer_id"]."</td><td> ".$row["Urgency"]."</td></tr>";
+                                     $temp=$row["customer_id"];
+                                     $qry2="select name from customer where id='$temp'";
+                                     $sql=mysqli_query($conn,$qry2);
+							         echo "<tr><td>" . $row["orderid"] . "</td> <td> ".$row["pname"]."</td><td> ".$sql."</td><td> ".$row["Urgency"]."</td></tr>";
 							         //echo "<img src='/php_test/image_archive/" . $last_file[0] . "' alt='error'>";
 
 
