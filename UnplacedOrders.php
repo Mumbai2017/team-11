@@ -55,7 +55,8 @@
 							} else {
 							     echo "0 results";
 							}
-    
-    ?>
+    echo "</table>";
+    ?><form action="new_dashboard/dashboard.php.html">
+    <input type="submit" name="res" value="Back" style="margin:auto;display:block;"></form>
 </body>
 </html>
