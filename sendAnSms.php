@@ -3,12 +3,12 @@ $post_data = array(
     // 'From' doesn't matter; For transactional, this will be replaced with your SenderId;
     // For promotional, this will be ignored by the SMS gateway
     'From'   => 'xxxxxxxxxx',
-    'To'    => 'xxxxxxxxxx',
+    'To'    => '9820136330',
     'Body'  => 'Hi John, your number 9123456780 is now turned Exotel.',
 );
  
-$exotel_sid = "xxxxx"; // Your Exotel SID
-$exotel_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Your exotel token
+$exotel_sid = "codeforgood7"; // Your Exotel SID
+$exotel_token = "6d45b2cbec38dc28a3bb0c4c5ed2a646632f28e4"; // Your exotel token
  
 $url = "https://".$exotel_sid.":".$exotel_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Sms/send";
  

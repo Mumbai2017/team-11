@@ -4,10 +4,7 @@
 ?>
 <!DOCTYPE html>
 
-	<?php
-		error_reporting(0);
-		//$sakhi_name = $_SESSION["sakhi_name"];
-	<!DOCTYPE html>
+		
 <!--
 	Transit by TEMPLATED
 	templated.co @templatedco
@@ -18,7 +15,7 @@
  
 <html lang="en">
 	<head>
-		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -32,7 +29,10 @@
 		
 	</head>
 	<body>
-<img src="sanisaheader.jpg" style="width:100%";></img>	$sakhi_name = "diksha";
+<img src="sanisaheader.jpg" style="width:100%";></img>
+	<?php
+		error_reporting(0);		
+		$sakhi_name = "diksha";
 		$sql = "SELECT * from orderdetails WHERE sakhi_id = (SELECT id from sakhi WHERE name = '$sakhi_name') AND status!=1";
 		$result = mysqli_query($conn,$sql);
 	    $count = mysqli_num_rows($result);
