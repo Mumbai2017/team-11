@@ -25,7 +25,7 @@
 	<body>
 <img src="sanisaheader.jpg" style="width:100%";>
 <div class="topnav" id="myTopnav">
-  <a href="index.php">Home</a>
+  <a href="myorders.php">Home</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 <div class="container">
