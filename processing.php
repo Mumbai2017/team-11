@@ -7,7 +7,6 @@
 -->
 
 <?php include'connection.php'
-session_start();
  ?>
  
 <html lang="en">
@@ -28,10 +27,9 @@ session_start();
 	<body>
 <img src="sanisaheader.jpg" style="width:100%";></img>
 
-<pre> <h1> Your is being processed...</h1>
-Your order will be fulfilled by the availabe Sakhi at the earliest.
-Please check back for more datails.
+<center><h1> Your Order is being processed...</h1></center>
+<center><h2>It will be fulfilled by an available Sakhi at the earliest.</h2></center>
+<center><h4>Please check back for more details.</h4></center>
 
-</pre>
 </body>
 </html>
