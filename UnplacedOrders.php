@@ -54,10 +54,10 @@
 							     while($row = $result->fetch_assoc()) {
 							     	//echo "<tr>";
                                     // echo "<tr><td>Test</td></tr>";
-                                     $temp=$row["customer_id"];
-                                     $qry2="select name from customer where id='$temp'";
-                                     $sql=mysqli_query($conn,$qry2);
-							         echo "<tr><td>" . $row["orderid"] . "</td> <td> ".$row["pname"]."</td><td> ".$sql."</td><td> ".$row["Urgency"]."</td></tr>";
+                                     //$temp=$row["customer_id"];
+                                     //$qry2="select name from customer where id='$temp'";
+                                     //$sql=mysqli_query($conn,$qry2);
+							         echo "<tr><td>" . $row["orderid"] . "</td> <td> ".$row["pname"]."</td><td> User 1</td><td> ".$row["Urgency"]."</td></tr>";
 							         //echo "<img src='/php_test/image_archive/" . $last_file[0] . "' alt='error'>";
 
 
