@@ -29,7 +29,7 @@
 		
 	</head>
 	<body>
-<img src="sanisaheader.jpg" style="width:100%";></img>
+<img src="sanisaheader.jpg" style="width:100%";>
 	<?php
 		error_reporting(0);		
 		$sakhi_name = "diksha";
@@ -47,8 +47,34 @@
 		    	$cust_row = mysqli_fetch_assoc($result1);
 		    	echo '<p style="font-size:21px; padding-top:20px; text-align: center">Product name: '.$row["pname"].'<br> Quantity: '.$row["pquantity"].' <br>Customer Location: '.$cust_row["location"].'</p>';
 		    	echo '<form method="post" action="order_confirm.php">
-					<input type="submit" name="res" value="accept"/>
-					<input type="submit" name="res" value="deny"/>
+					<input type="submit" name="res" value="accept" style="margin:auto;
+  display:block; background: #17232b;
+  background-image: -webkit-linear-gradient(top, #17232b, #2980b9);
+  background-image: -moz-linear-gradient(top, #17232b, #2980b9);
+  background-image: -ms-linear-gradient(top, #17232b, #2980b9);
+  background-image: -o-linear-gradient(top, #17232b, #2980b9);
+  background-image: linear-gradient(to bottom, #17232b, #2980b9);-webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 34px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;"/><br>
+					<input type="submit" name="res" value="deny" style="margin:auto;
+  display:block; background: #17232b;
+  background-image: -webkit-linear-gradient(top, #17232b, #2980b9);
+  background-image: -moz-linear-gradient(top, #17232b, #2980b9);
+  background-image: -ms-linear-gradient(top, #17232b, #2980b9);
+  background-image: -o-linear-gradient(top, #17232b, #2980b9);
+  background-image: linear-gradient(to bottom, #17232b, #2980b9);-webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 34px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;"/>
 					<input type="hidden" name="sakhi_id" value="'.$sakhi_id.'"/>
 					<input type="hidden" name="quantity" value="'.$quantity.'"/>
 					<input type="hidden" name="pname" value="'.$item_name.'"/>
