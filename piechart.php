@@ -2,7 +2,21 @@
 <head>
 <title>Highcharts Tutorial number of sakhis versus area</title>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-   <script src="https://code.highcharts.com/highcharts.js"></script>  
+   <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <meta charset="UTF-8">
+		<title>Transit by TEMPLATED</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		
+		
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+	
 </head>
 <body>
 <?php
@@ -14,7 +28,8 @@ while($r = mysqli_fetch_assoc($sth)) {
     $rows[] = $r;
 }
 ?>
-
+<img src="sanisaheader.jpg" style="width:100%";>
+    
 <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
 <script language="JavaScript">    
 
@@ -25,7 +40,7 @@ $(document).ready(function() {
        plotShadow: false
    };
    var title = {
-      text: 'Browser market shares at a specific website, 2014'   
+      text: 'Location based Analysis'   
    };      
    var tooltip = {
       pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -61,5 +76,7 @@ var complex = <?php echo json_encode($rows,JSON_NUMERIC_CHECK); ?>;
    $('#container').highcharts(json);  
 });
 </script>
+    <form action="new_dashboard/dashboard.php.html">
+    <input type="submit" name="res" value="Back" style="margin:auto;display:block;"></form>
 </body>
 </html>
