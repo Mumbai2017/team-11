@@ -25,7 +25,7 @@ $post_data = array(
     // For promotional, this will be ignored by the SMS gateway
     'From'   => 'xxxxxxxxxx',
     'To'    => '9820136330',
-    'Body'  => 'Hi John, your number 9123456780 is now turned https://adityamaniar240196.000webhostapp.com/myorders.php.',
+    'Body'  => 'Hi Aditya, your number 9123456780 is now turned https://adityamaniar240196.000webhostapp.com/myorders.php.',
 );
  
 $exotel_sid = "codeforgood7"; // Your Exotel SID

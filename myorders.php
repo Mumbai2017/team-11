@@ -30,6 +30,8 @@
 	</head>
 	<body>
 <img src="sanisaheader.jpg" style="width:100%";>
+<button><a href="template/orderNgo.html">Buy Items</a></button>
+<button><a href="sakhi_display.php">My Peers</a></button>
 	<?php
 		error_reporting(0);		
 		$sakhi_name = "diksha";
