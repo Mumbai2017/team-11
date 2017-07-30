@@ -35,6 +35,34 @@
 					</ul>
 				</nav>
 			</header>
+    <p style="font-size: 19px;">Unplaced orders</p>
+    <?php 
+    $qry="select * from orderdetails where status=0;";
+    $result=mysqli_query($conn,$qry);
+    //$result=mysqli_query($conn,$qry2);
+    //echo $result;
+    //$row=mysqli_fetch_assoc($result);
+    //echo $row["sakhiid"];
     
+    /*if ($conn->query($qry) === TRUE) {
+	 echo "Successful";
+} else {
+	echo "Query error"; 
+}*/echo "<table><tr><th>Order ID</th><th>Product</th><th>Customer ID</th><th>Urgent</th></tr>";
+        if ($result->num_rows > 0) {
+							     // output data of each row
+							     while($row = $result->fetch_assoc()) {
+							     	//echo "<tr>";
+                                    // echo "<tr><td>Test</td></tr>";
+							         echo "<tr><td>" . $row["orderid"] . "</td> <td> ".$row["pname"]."</td><td> ".$row["customer_id"]."</td><td> ".$row["Urgency"]."</td></tr>";
+							         //echo "<img src='/php_test/image_archive/" . $last_file[0] . "' alt='error'>";
+
+
+							     }
+							} else {
+							     echo "0 results";
+							}
+    
+    ?>
 </body>
 </html>

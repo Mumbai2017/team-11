@@ -45,7 +45,7 @@
   <h2>Order List</h2>
     <br>
 <br>
-<br>	MAKE CHANGES TO SESSION
+<br>	
   <div class="table-responsive">          
   <table class="table">
     <thead>
