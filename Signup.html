@@ -48,8 +48,15 @@ function myFunction() {
 <div class="row">
 <div id="contactform" class="col-lg-6 col-md-6 col-sm-12 col-xs-12"  style="position:absolute;left:0;right:0;margin:auto;">		
 <form name="myForm" action="register.php" method="post">
-<div class="form-group">
-<br><br><br>
+
+    <br><br><br>
+    <div class="form-group">Type of user:<br>
+  <input type="radio" name="stakeholder" value="customer" id="customer"/><b> Customer</b><br>
+  <input type="radio" name="stakeholder" value="sakhi" id="sakhi"/><b> Sakhi</b><br>
+  </div>
+    
+    <div class="form-group">
+
     <label for="NameInput">Name :</label>
     <input type="text" class="form-control focusinput" name="Name_Input" id="Name_Input12" placeholder="Enter name" autofocus required style=" text-transform: capitalize;">
     
@@ -97,10 +104,7 @@ function myFunction() {
     </ul>-->
   </div>
   
-  <div class="form-group">
-  <input type="radio" name="stakeholder" value="customer" id="customer"/><b> Customer</b><br>
-  <input type="radio" name="stakeholder" value="sakhi" id="sakhi"/><b> Sakhi</b><br>
-  </div>
+  
 
   <button type="submit" id="submit_form" onsubmit="" style="margin-bottom: 5%;">Submit</button>
 
