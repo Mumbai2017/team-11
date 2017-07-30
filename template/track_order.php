@@ -33,7 +33,7 @@
   			$delivered = "In Transit";
   		$order_id = $row["orderid"];
   		//echo $order_id;
-  		echo 'Product Name: '.$row["pname"].' Product Quantity: '.$row["pquantity"].' Order Delivered: '.$delivered.'<br>';
+  		echo '<h1>Product Name: </h1>'.$row["pname"].' Product Quantity: '.$row["pquantity"].' Order Delivered: '.$delivered.'<br>';
   		echo '<form method="post" action="../tracking.php">
   				<input type="submit" name="submit" value="Track Order" />
   				<input type="hidden" name="id" value="'.$order_id.'" />
