@@ -43,7 +43,7 @@
 				</nav>
 			</header>
 		
-		<
+		
 		<!-- Banner -->
 			<section id="banner">
 				<h2>Shramak Naari Sangh</h2>
