@@ -2,7 +2,15 @@
 <head>
 <title>Most bought category</title>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-   <script src="https://code.highcharts.com/highcharts.js"></script>  
+   <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+    <noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
 </head>
 <body>
 <?php
@@ -14,7 +22,7 @@ while($r = mysqli_fetch_assoc($sth)) {
     $rows[] = $r;
 }
 ?>
-
+<img src="sanisaheader.jpg" style="width:100%";>
 <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
 <script language="JavaScript">    
 
@@ -25,7 +33,7 @@ $(document).ready(function() {
        plotShadow: false
    };
    var title = {
-      text: 'Browser market shares at a specific website, 2014'   
+      text: 'Sales as per flavour'   
    };      
    var tooltip = {
       pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -61,5 +69,7 @@ var complex = <?php echo json_encode($rows,JSON_NUMERIC_CHECK); ?>;
    $('#container').highcharts(json);  
 });
 </script>
+    <form action="new_dashboard/dashboard.php.html">
+    <input type="submit" name="res" value="Back" style="margin:auto;display:block;"></form>
 </body>
 </html>
