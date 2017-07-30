@@ -46,7 +46,7 @@
 		
 		<!-- Banner -->
 			<section id="banner">
-				<h2>Shramak Naari Sangh</h2>
+				<h2>Shramik Naari Sangh</h2>
 				<p>Priviledged are those who can support the less priviledged!</p>
 				<ul class="actions">
 					<!--<li>
@@ -59,7 +59,7 @@
 			<section id="one" class="wrapper style1 special">
 				<div class="container">
 					<header class="major">
-						<h2>Some of our chakri products are</h2>
+						<h2>Some of our chaakri products are</h2>
 
 					</header>
 					<div class="row 150%">

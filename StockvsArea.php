@@ -5,6 +5,7 @@
    <script src="https://code.highcharts.com/highcharts.js"></script>  
 </head>
 <body>
+    <img src="sanisaheader.jpg" style="width:100%";>
 <?php
    include("connection.php");
 $location=$conn->query("SELECT sakhiloc FROM itemsdetails GROUP BY sakhiloc;");
@@ -324,5 +325,7 @@ console.log(locationarray);
   
 });
 </script>
+    <form action="new_dashboard/dashboard.php.html">
+    <input type="submit" name="res" value="Back" style="margin:auto;display:block;"></form>
 </body>
 </html>
