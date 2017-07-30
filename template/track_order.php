@@ -41,6 +41,17 @@
   	}
 ?>
 
+<div class="container">
+  <p><h1>Comment and Feedbacks:</h1></p>
+  <form action="#">
+    <div class="form-group">
+      <label for="comment"></label>
+      <textarea class="form-control" rows="7" id="comment"></textarea>
+    </div>
+	<button type="submit" id="submit_form" style="margin-bottom: 5%;">Submit</button>
+  </form>
+</div>
+
 
 </body>
 </html>
