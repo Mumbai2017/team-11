@@ -24,17 +24,7 @@
 	
     </head>
 <body>
-    <header id="header" style="background-color:black";>
-		
-				<h1><a href="index.html">Welcome!</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.php">Home</a></li>
-						<li><a href="Signup.html" id="register" class="button special">Register</a></li>
-						<li><a href="Login.html" id="login" class="button special">Sign In</a></li>
-					</ul>
-				</nav>
-			</header>
+    <img src="sanisaheader.jpg" style="width:100%";>
     <p style="font-size: 19px; text-align: center">Unplaced orders</p>
     <?php 
     $qry="select * from orderdetails where status=0;";
